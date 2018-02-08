@@ -1,0 +1,40 @@
+"use strict";
+
+//zadanie 1.
+{
+  var hello = "Hello";
+  var world = "World";
+  hello + " " + world + "!";
+}
+//zadanie 2.
+var multiply = function multiply() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+  return a * b;
+};
+multiply(5);
+//zadanie 3.
+var average = function average() {
+  for (var _len = arguments.length, numbs = Array(_len), _key = 0; _key < _len; _key++) {
+    numbs[_key] = arguments[_key];
+  }
+
+  var sum = 0;
+  numbs.forEach(function (numb) {
+    return sum += numb;
+  });
+  console.log(sum / numbs.length);
+};
+average(1, 3, 6, 6);
+average(1, 3);
+average(1);
+//zadanie 4
+var grades = [1, 5, 5, 5, 4, 3, 3, 2, 1];
+average.apply(undefined, grades);
+//zadanie 5
+var datas = [1, 4, 'Iwona', false, 'Nowak'];
+var firstName = datas[2],
+    lastName = datas[4];
+
+console.log(firstName);
+console.log(lastName);
